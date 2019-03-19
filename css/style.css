@@ -1,0 +1,80 @@
+/*Color Group from W3School's Color Selector
+#F7D7D4 light pink
+#FE2712 red
+#347B98 gray blue
+#FB9902 gold
+#342309 almost black
+*/
+body {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #F7D7D4;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #347B98;
+}
+
+#pageTitle {
+  width: 100%;
+  justify-content: center;
+}
+
+/*Div with both length adjustors*/
+#length-everything {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+/*class for the break length and session length adjustor divs*/
+.timer-info {
+  width: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
+}
+
+/*Class for the divs with just the up/dowm buttons and numbers*/
+.adjGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/*Class for the length numbers and buttons*/
+.lengthSet {
+  margin: 5px;
+  text-align: center;
+}
+
+/*Class for just the length numbers*/
+.timeSetting {
+  width: 30px;
+}
+
+/*div that contains the current status statement (Currently...)*/
+#phase-container {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Class for countdown attributes when less than 1 minute is remaining*/
+.alertColor {
+  color: #FE2712;
+  font-weight: bold;
+}
+
+/*All buttons*/
+button {
+  background: #FB9902;
+  align-content: center;
+  border: 0;
+  box-shadow: 1px 1px;
+  border-radius: 5px;
+}
