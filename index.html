@@ -1,80 +1,96 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pomodoro Clock - FreeCodeCamp Front End Libraries Challenge</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Pomodoro Clock  - FreeCodeCamp Front End Libraries Challenge</title>
-  
-  
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+    />
 
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  
-</head>
+  <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
-<body>
+    <h1 id="pageTitle">Pomodoro Clock</h1>
 
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <div id="length-everything">
+      <div id="break-everything" class="timer-info">
+        <h2 id="break-label">Break Length</h2>
+        <div id="breakAdj" class="adjGroup">
+          <button
+            id="break-decrement"
+            class="incrementor lengthSet"
+            type="button"
+            onclick="breakDown()"
+          >
+            <i class="material-icons">arrow_downward</i>
+          </button>
+          <h3 id="break-length" class="timeSetting lengthSet"></h3>
+          <button
+            id="break-increment"
+            class="incrementor lengthSet"
+            type="button"
+            onclick="breakUp()"
+          >
+            <i class="material-icons">arrow_upward</i>
+          </button>
+        </div>
+      </div>
 
-<h1 id="pageTitle">Pomodoro Clock</h1>
-
-<div id="length-everything">
-
-  <div id="break-everything" class="timer-info">
-    <h2 id="break-label">Break Length</h2>
-    <div id="breakAdj" class="adjGroup">
-      <button id="break-decrement" class="incrementor lengthSet" type="button" onclick="breakDown()">
-    <i class="material-icons">arrow_downward</i>
-  </button>
-      <h3 id="break-length" class="timeSetting lengthSet"></h3>
-      <button id="break-increment" class="incrementor lengthSet" type="button" onclick="breakUp()">
-    <i class="material-icons">arrow_upward</i>
-  </button>
+      <div id="session-everything" class="timer-info">
+        <h2 id="session-label">Session Length</h2>
+        <div id="sessionAdj" class="adjGroup">
+          <button
+            id="session-decrement"
+            class="incrementor lengthSet"
+            type="button"
+            onclick="sessionDown()"
+          >
+            <i class="material-icons">arrow_downward</i>
+          </button>
+          <h3 id="session-length" class="timeSetting lengthSet"></h3>
+          <button
+            id="session-increment"
+            class="incrementor lengthSet"
+            type="button"
+            onclick="sessionUp()"
+          >
+            <i class="material-icons">arrow_upward</i>
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div id="session-everything" class="timer-info">
-    <h2 id="session-label">Session Length</h2>
-    <div id="sessionAdj" class="adjGroup">
-      <button id="session-decrement" class="incrementor lengthSet" type="button" onclick="sessionDown()">
-    <i class="material-icons">arrow_downward</i>
-  </button>
-      <h3 id="session-length" class="timeSetting lengthSet"></h3>
-      <button id="session-increment" class="incrementor lengthSet" type="button" onclick="sessionUp()">
-    <i class="material-icons">arrow_upward</i>
-  </button>
+    <h2 id="timer-label"></h2>
+    <h3 id="time-left"></h3>
+    <div id="phase-container">
+      <h2 id="currentPhase"></h2>
     </div>
-  </div>
+    <div id="use-buttons">
+      <button id="start_stop" type="button" onclick="startStop()">
+        <i class="material-icons">play_arrow</i>
+        <i class="material-icons">pause</i>
+      </button>
+      <button id="reset" type="button" onclick="reset()">
+        <i class="material-icons">replay</i>
+      </button>
+    </div>
 
-</div>
+    <audio
+      id="beep"
+      preload="auto"
+      src="https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"
+    ></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<h2 id="timer-label"></h2>
-<h3 id="time-left"></h3>
-<div id="phase-container">
-  <h2 id="currentPhase"></h2>
-</div>
-<div id="use-buttons">
-  <button id="start_stop" type="button" onclick="startStop()">
-    <i class="material-icons">play_arrow</i>
-    <i class="material-icons">pause</i>
-  </button>
-  <button id="reset" type="button" onclick="reset()">
-    <i class="material-icons">replay</i>
-  </button>
-</div>
-
-<audio id="beep" preload="auto" src="https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"></audio>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
-</body>
-
+    <script src="js/index.js"></script>
+  </body>
 </html>
